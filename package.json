@@ -10,10 +10,10 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
-  "homepage": "https://jcrademacher.github.io/site",
+  "homepage": "https://jcrademacher.github.io",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "build": "react-scripts build"
   },
   "eslintConfig": {
