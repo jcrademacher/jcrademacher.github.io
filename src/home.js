@@ -13,7 +13,8 @@ function Home() {
                 I started this site to showcase my build projects and backpacking trips. My electronics interests include RF & microwave, mixed signal processing, and IC design, although I don't have many builds in those fields yet.
                 <br/><br/>
                 During my free time I design hardware & software to do cool stuff, often times with those 
-                awesome <a href="https://cdn-shop.adafruit.com/datasheets/WS2812.pdf">WS2812 RGB LEDs</a>. Many of my projects are printed circuit board (PCB) based, as it is an easy, affordable, and reliable way to consolidate circuitry and buttons or dials.
+                awesome <a href="https://cdn-shop.adafruit.com/datasheets/WS2812.pdf">WS2812 RGB LEDs</a>. Many of my projects are printed circuit board (PCB) based
+                , as it is an easy, affordable, and reliable way to consolidate circuitry and buttons or dials.
             </p>
         </div>
     );
