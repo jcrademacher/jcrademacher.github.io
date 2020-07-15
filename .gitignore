@@ -1,2 +1,4 @@
 node_modules
 build
+person-site.code-workspace
+.DS_Store
