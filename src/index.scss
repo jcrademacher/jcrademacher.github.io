@@ -1,0 +1,88 @@
+@import 'theme';
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $primary-dark;
+    color: $primary-white;
+    margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+    font-family: $title-font;
+    font-weight: 100;
+
+    &.separator {
+        margin-bottom: 10px;
+    }
+
+    margin-top: 0;
+}
+
+h2 {
+    font-family: $title-font;
+    font-weight: 100;
+    margin-top: 0;
+    text-align: center;
+}
+
+h3 {
+    font-family: $title-font;
+    font-weight: 100;
+    margin-top: 0;
+    text-align: center;
+}
+
+h4 {
+    font-family: $title-font;
+    font-weight: 100;
+    margin-top: 0;
+}
+
+div {
+    &.separator {
+        width: 100px;
+        border-bottom: 3px solid $primary-yellow;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+}
+
+a {
+    color:  $primary-yellow;
+
+    // &:visited {
+    //     color:  #b46600;
+    // }
+
+    &.no-underline {
+        text-decoration: none;
+    }
+
+    &.hover {
+        color: $primary-white;
+        
+        &:hover {
+            color: $primary-yellow;
+        }
+    }
+}
+
+.icon-link {
+    cursor: pointer;
+    color: $primary-white;
+
+    &:hover {
+        color: $primary-yellow;
+    }
+}
+
+
+
+
