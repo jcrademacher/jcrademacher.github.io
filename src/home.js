@@ -1,36 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './home.css';
+import React from 'react'
+import './home.scss'
+import profile from './profile.jpg'
 
 function Home() {
-  return (
-    <div>
-      <header className="home-header">
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt neque ut dolor pellentesque placerat. 
-        Curabitur nec convallis orci. Mauris dapibus massa ligula, ut efficitur eros convallis sed. Integer quis accumsan nunc,
-         in congue dui. Quisque viverra vulputate mi, vel laoreet augue ullamcorper commodo. Morbi iaculis id turpis vel efficitur.
-          Donec accumsan diam ut vestibulum sodales. Cras ultrices nulla a mauris rhoncus mollis. Suspendisse at purus nisi. 
-          Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis placerat laoreet mollis. 
-          Donec aliquam nisi viverra turpis sodales, eget fringilla tortor vehicula. Sed fringilla bibendum pellentesque. 
-          Sed venenatis quam tincidunt eros imperdiet ornare. Phasellus vehicula massa id ullamcorper vestibulum.
-        </p>
-        <a
-          className="home-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div id="home">
+            <img id="profile" src={profile}></img>
+            <br/>
+            <h3>Hi, my name is Jack Rademacher and I'm a student at the University of Michigan studying Electrical Engineering.
+            </h3>
+            <p>
+                I started this site to showcase my build projects and backpacking trips. My electronics interests include RF & microwave, mixed signal processing, and IC design, although I don't have many builds in those fields yet.
+                <br/><br/>
+                During my free time I design hardware & software to do cool stuff, often times with those 
+                awesome <a href="https://cdn-shop.adafruit.com/datasheets/WS2812.pdf">WS2812 RGB LEDs</a>. Many of my projects are printed circuit board (PCB) based, as it is an easy, affordable, and reliable way to consolidate circuitry and buttons or dials.
+            </p>
+        </div>
+    );
 }
 
 export default Home;
