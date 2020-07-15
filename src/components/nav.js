@@ -1,10 +1,10 @@
 import React from 'react';
-import './nav.scss';
+import '../sass/nav.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
-import { backpacking, projects } from './item-content.js'
+import { backpacking, projects } from '../item-content.js'
 
 const path = require('path');
 
@@ -80,8 +80,8 @@ function Nav(props) {
             <div id='contact-container'>
                 <a href="https://linkedin.com/in/jack-rademacher" className='icon-link social-media-link'><FontAwesomeIcon icon={faLinkedinIn}/></a>
                 <a href="mailto:jackradema@gmail.com" className='icon-link social-media-link'><FontAwesomeIcon icon={faEnvelope}/></a>
-                <a href="https://linkedin.com/in/jack-rademacher" className='icon-link social-media-link'><FontAwesomeIcon icon={faInstagram}/></a>
-                <a href="https://linkedin.com/in/jack-rademacher" className='icon-link social-media-link'><FontAwesomeIcon icon={faGithub}/></a>
+                <a href="https://www.instagram.com/jrad66/?hl=en" className='icon-link social-media-link'><FontAwesomeIcon icon={faInstagram}/></a>
+                <a href="https://github.com/jcrademacher" className='icon-link social-media-link'><FontAwesomeIcon icon={faGithub}/></a>
             </div>
         </nav>
     );

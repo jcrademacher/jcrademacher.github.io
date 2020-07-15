@@ -1,15 +1,19 @@
 import React from 'react';
-import './app.scss';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
 } from "react-router-dom";
-import Nav from './nav.js'
-import Home from './home.js'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+import Nav from './nav.js'
+import Home from '../pages/home.js';
+import Projects from '../pages/projects.js'
+import Backpacking from '../pages/backpacking.js'
+import '../sass/app.scss';
 
 const MOBILE_WIDTH = 800;
 
@@ -54,13 +58,18 @@ class App extends React.Component {
             <Router>
                 <div id="site-container">
                     <div id="site-header" className={this.state.mobile ? "mobile" : ""}>
-                        <a onClick={() => this.setState({showNav: !this.state.showNav})} className="icon-link"><FontAwesomeIcon icon={faBars}/></a>
+                        <a onClick={() => this.setState({showNav: !this.state.showNav})} className="icon-link">
+                            <FontAwesomeIcon icon={faBars} className={`burger ${this.state.showNav ? "rotate" : ""}`}/>
+                        </a>
                     </div>
                     <Nav show={this.state.showNav} mobile={this.state.mobile}/>
                     <div onClick={() => this.setState({showNav: !this.state.mobile || false})} id="site-content" className={this.state.mobile ? "mobile" : ""}>
                         <Switch>
                             <Route path="/projects">
-
+                                <Projects/>
+                            </Route>
+                            <Route path="/backpacking">
+                                <Backpacking/>
                             </Route>
                             <Route path="/">
                                 <Home/>
