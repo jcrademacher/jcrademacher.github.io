@@ -35,7 +35,7 @@
 
 #contact-container {
     position: fixed;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     padding: 20px;
 
@@ -45,8 +45,15 @@
 
     background-color: $secondary-dark;
 
+    transform: translateX(calc(#{-$nav-width}));
+    transition: transform ease 0.4s;
+
     .social-media-link {
         margin-right: 10px;
+    }
+
+    &.show {
+        transform: translateX(0);
     }
 }
 
@@ -71,7 +78,7 @@
     }
 
     .nav-header {
-        display: inline-flex;
+        display: inline;
         align-items: center;
         font-family: $title-font;
         font-size: 18px;

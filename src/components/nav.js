@@ -1,8 +1,7 @@
 import React from 'react';
 import '../sass/nav.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretRight, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { backpacking, projects } from '../item-content.js'
 
@@ -76,12 +75,7 @@ function Nav(props) {
                 <NavHeader to="/backpacking" title="Backpacking">
                     {navItemMapper(backpacking)}
                 </NavHeader>
-            </div>
-            <div id='contact-container'>
-                <a href="https://linkedin.com/in/jack-rademacher" className='icon-link social-media-link'><FontAwesomeIcon icon={faLinkedinIn}/></a>
-                <a href="mailto:jackradema@gmail.com" className='icon-link social-media-link'><FontAwesomeIcon icon={faEnvelope}/></a>
-                <a href="https://www.instagram.com/jrad66/?hl=en" className='icon-link social-media-link'><FontAwesomeIcon icon={faInstagram}/></a>
-                <a href="https://github.com/jcrademacher" className='icon-link social-media-link'><FontAwesomeIcon icon={faGithub}/></a>
+                <NavHeader to="/resume" title="Résumé"/>
             </div>
         </nav>
     );

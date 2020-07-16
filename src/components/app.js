@@ -7,7 +7,8 @@ import {
 } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 import Nav from './nav.js'
 import Home from '../pages/home.js';
@@ -75,6 +76,12 @@ class App extends React.Component {
                                 <Home/>
                             </Route>
                         </Switch>
+                    </div>
+                    <div id='contact-container' className={this.state.showNav ? "show" : ""}>
+                        <a href="https://linkedin.com/in/jack-rademacher" className='icon-link social-media-link'><FontAwesomeIcon icon={faLinkedinIn}/></a>
+                        <a href="mailto:jackradema@gmail.com" className='icon-link social-media-link'><FontAwesomeIcon icon={faEnvelope}/></a>
+                        <a href="https://www.instagram.com/jrad66/?hl=en" className='icon-link social-media-link'><FontAwesomeIcon icon={faInstagram}/></a>
+                        <a href="https://github.com/jcrademacher" className='icon-link social-media-link'><FontAwesomeIcon icon={faGithub}/></a>
                     </div>
                 </div>
             </Router>
