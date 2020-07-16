@@ -1,5 +1,6 @@
 import React from 'react';
 import '../sass/nav.scss';
+import resume from '../media/Jack Rademacher Resume.pdf'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -75,7 +76,14 @@ function Nav(props) {
                 <NavHeader to="/backpacking" title="Backpacking">
                     {navItemMapper(backpacking)}
                 </NavHeader>
-                <NavHeader to="/resume" title="Résumé"/>
+                <div className="nav-header-container">
+                    <span className="nav-header">
+                        <a href={resume}>
+                            Résumé
+                        </a>
+                    </span>
+                </div>
+                
             </div>
         </nav>
     );

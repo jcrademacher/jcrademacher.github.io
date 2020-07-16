@@ -13,6 +13,7 @@
     left: 0;
     top: 0px;
     overflow-y: scroll;
+    z-index: 1;
     
     &::-webkit-scrollbar {
         display: none;
@@ -38,6 +39,7 @@
     bottom: 0;
     left: 0;
     padding: 20px;
+    z-index: 1;
 
     width: calc(#{$nav-width} - 40px);
     min-width: calc(#{$nav-min-width} - 40px);
@@ -67,13 +69,14 @@
         overflow-y: hidden;
 
         &.opened {
-            max-height: 500px;
+            max-height: 700px;
         }
 
         .nav-item {
             padding: 0px 10px 10px 10px;
             margin: 10px 10px 0px 20px;
             border-bottom: 1px solid gray;
+            font-size: 14px;
         }
     }
 

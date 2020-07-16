@@ -1,6 +1,7 @@
 import React from 'react'
 import '../sass/home.scss'
 import profile from '../media/profile.jpg';
+import resume from '../media/Jack Rademacher Resume.pdf'
 import {
     Link
 } from "react-router-dom";
@@ -18,10 +19,10 @@ function Home() {
                 During my free time I design hardware & software to do cool stuff, often times with those 
                 awesome <a href="https://cdn-shop.adafruit.com/datasheets/WS2812.pdf">WS2812 RGB LEDs</a> and 
                 <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html"> STM32 microcontrollers</a>. 
-                All design files are hosted on my <a href="https://github.com/jcrademacher">Github</a>, including this site. 
+                All software files are hosted on my <a href="https://github.com/jcrademacher">Github</a>, including this site. 
                 <br/><br/>
                 If you have any questions about my projects feel free to <a href="mailto:jackradema@gmail.com">email me</a>. 
-                For a full list of my qualifications and work experience you can check out my <Link to="/resume">resume</Link>.
+                For a full list of my qualifications and work experience you can check out my <a href={resume}>résumé</a>.
             </p>
         </div>
     );

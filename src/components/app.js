@@ -16,7 +16,7 @@ import Projects from '../pages/projects.js'
 import Backpacking from '../pages/backpacking.js'
 import '../sass/app.scss';
 
-const MOBILE_WIDTH = 800;
+const MOBILE_WIDTH = 700;
 
 class App extends React.Component {
 
@@ -67,12 +67,12 @@ class App extends React.Component {
                     <div onClick={() => this.setState({showNav: !this.state.mobile || false})} id="site-content" className={this.state.mobile ? "mobile" : ""}>
                         <Switch>
                             <Route path="/projects">
-                                <Projects/>
+                                <Projects mobile={this.state.mobile}/>
                             </Route>
                             <Route path="/backpacking">
                                 <Backpacking/>
                             </Route>
-                            <Route path="/">
+                            <Route exact path="/">
                                 <Home/>
                             </Route>
                         </Switch>
