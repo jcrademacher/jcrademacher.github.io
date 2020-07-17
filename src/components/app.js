@@ -1,14 +1,12 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
+    Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import Nav from './nav.js'
 import Home from '../pages/home.js';
@@ -56,7 +54,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <Router>
+            <Router basename={`${process.env.PUBLIC_URL}/`} history={this.props.history}>
                 <div id="site-container">
                     <div id="site-header" className={this.state.mobile ? "mobile" : ""}>
                         <a onClick={() => this.setState({showNav: !this.state.showNav})} className="icon-link">
@@ -70,18 +68,12 @@ class App extends React.Component {
                                 <Projects mobile={this.state.mobile}/>
                             </Route>
                             <Route path="/backpacking">
-                                <Backpacking/>
+                                <Backpacking mobile={this.state.mobile}/>
                             </Route>
                             <Route exact path="/">
                                 <Home/>
                             </Route>
                         </Switch>
-                    </div>
-                    <div id='contact-container' className={this.state.showNav ? "show" : ""}>
-                        <a href="https://linkedin.com/in/jack-rademacher" className='icon-link social-media-link'><FontAwesomeIcon icon={faLinkedinIn}/></a>
-                        <a href="mailto:jackradema@gmail.com" className='icon-link social-media-link'><FontAwesomeIcon icon={faEnvelope}/></a>
-                        <a href="https://www.instagram.com/jrad66/?hl=en" className='icon-link social-media-link'><FontAwesomeIcon icon={faInstagram}/></a>
-                        <a href="https://github.com/jcrademacher" className='icon-link social-media-link'><FontAwesomeIcon icon={faGithub}/></a>
                     </div>
                 </div>
             </Router>

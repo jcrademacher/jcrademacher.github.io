@@ -12,12 +12,11 @@
     height:100vh;
     left: 0;
     top: 0px;
-    overflow-y: scroll;
     z-index: 1;
-    
-    &::-webkit-scrollbar {
-        display: none;
-    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &.show {
         transform: translateX(0);
@@ -28,6 +27,11 @@
 
 #nav-container {
     padding: 20px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     &.mobile {
         padding-top: 60px;
@@ -35,9 +39,8 @@
 }
 
 #contact-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    // position: absolute;
+    // bottom: 0;
     padding: 20px;
     z-index: 1;
 

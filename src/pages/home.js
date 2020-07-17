@@ -5,7 +5,6 @@ import resume from '../media/Jack Rademacher Resume.pdf'
 import {
     Link
 } from "react-router-dom";
-import adi from '../media/adi.png';
 
 function Home() {
     return (

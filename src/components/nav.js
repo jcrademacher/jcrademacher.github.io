@@ -2,7 +2,8 @@ import React from 'react';
 import '../sass/nav.scss';
 import resume from '../media/Jack Rademacher Resume.pdf'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import { faCaretRight, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import { backpacking, projects } from '../item-content.js'
 
@@ -57,24 +58,19 @@ function NavItem(props) {
     );
 }
 
-function navItemMapper(data, stubs) {
-    data.sort((a, b) => a.title.localeCompare(b.title));
-
-    return data.map((el) => (
-        <NavItem to={el.route}>{el.title}</NavItem>
-    ));
-}
-
 function Nav(props) {
+    projects.sort((a, b) => a.title.localeCompare(b.title));
+    backpacking.sort((a, b) => a.title.localeCompare(b.title));
+
     return (
         <nav className={props.show ? " show" : ""} id='site-nav'>
             <div id="nav-container" className={props.mobile ? "mobile" : ""}>
                 <NavHeader to="/" title="Home"/>
                 <NavHeader to="/projects" title="Projects">
-                    {navItemMapper(projects)}
+                    {projects.map((el) => <NavItem key={el.route} to={el.route}>{el.title}</NavItem>)}
                 </NavHeader>
                 <NavHeader to="/backpacking" title="Backpacking">
-                    {navItemMapper(backpacking)}
+                    {backpacking.map((el) => <NavItem key={el.route} to={el.route}>{el.title}</NavItem>)}
                 </NavHeader>
                 <div className="nav-header-container">
                     <span className="nav-header">
@@ -83,7 +79,12 @@ function Nav(props) {
                         </a>
                     </span>
                 </div>
-                
+            </div>
+            <div id='contact-container' className={props.show ? "show" : ""}>
+                <a href="https://linkedin.com/in/jack-rademacher" className='icon-link social-media-link'><FontAwesomeIcon icon={faLinkedinIn}/></a>
+                <a href="mailto:jackradema@gmail.com" className='icon-link social-media-link'><FontAwesomeIcon icon={faEnvelope}/></a>
+                <a href="https://www.instagram.com/jrad66/?hl=en" className='icon-link social-media-link'><FontAwesomeIcon icon={faInstagram}/></a>
+                <a href="https://github.com/jcrademacher" className='icon-link social-media-link'><FontAwesomeIcon icon={faGithub}/></a>
             </div>
         </nav>
     );
