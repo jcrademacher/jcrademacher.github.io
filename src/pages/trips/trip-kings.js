@@ -1,5 +1,6 @@
 import React from 'react'
 import { TableOfContentsWrapper, TableOfContentsHeading, TableOfContentsSubheading } from '../../components/content-list'
+import kings from '../../media/kings/kings_thumb.jpeg'
 
 var moment = require('moment'); 
 
@@ -25,7 +26,7 @@ export const metadata = {
     , subtitle: "Kings Peak is the highest peak in Utah, just below 14k feet. We started at Henry's Fork trailhead and hiked up along Henry's Fork river \
                 before having to traverse a passe to reach the base of the peak."
     , date: moment("20200807")
-    //, thumbnail: franconia
+    , thumbnail: kings
     , route: "/kings-peak"
     , tags: []
 }
