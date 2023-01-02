@@ -27,7 +27,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -a -b master -d build",
     "build": "react-scripts build && react-snapshot",
-    "dev": "react-scripts start",
+    "dev": "CHOKIDAR_USEPOLLING=true react-scripts start",
     "preinstall": "npx npm-force-resolutions"
   },
   "eslintConfig": {

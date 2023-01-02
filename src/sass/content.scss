@@ -87,6 +87,7 @@ img.header {
 
 .thumbnail {
     margin-right: 10px;
+    object-fit: cover;
 
     &.mobile {
         margin-right: 0px;

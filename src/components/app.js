@@ -62,7 +62,7 @@ class App extends React.Component {
                         </a>
                     </div>
                     <Nav show={this.state.showNav} mobile={this.state.mobile}/>
-                    <div onClick={() => this.setState({showNav: !this.state.mobile || false})} id="site-content" className={this.state.mobile ? "mobile" : ""}>
+                    <div onClick={() => this.setState({showNav: !this.state.mobile})} id="site-content" className={this.state.mobile ? "mobile" : ""}>
                         <Switch>
                             <Route path="/projects"
                                 component={() => <ContentHome dir="projects" mobile={this.state.mobile}/>}
