@@ -3,7 +3,7 @@ import '../sass/home.scss'
 import profile from '../media/profile.jpg';
 import mich from '../media/Block_M-Hex.png';
 import mit from '../media/MIT_logo.png';
-import resume from '../media/Jack Rademacher Resume.pdf'
+import resume from '../media/resume.pdf'
 import {
     Link
 } from "react-router-dom";
