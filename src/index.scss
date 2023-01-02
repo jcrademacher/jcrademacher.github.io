@@ -10,8 +10,10 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+    
+    font-size: 14px;
 }
 
 h1 {
@@ -81,6 +83,11 @@ a {
         text-decoration: none;
     }
 
+    &.bare {
+        text-decoration: none;
+        color: inherit;
+    }
+
     &.hover {
         color: $primary-white;
         
@@ -143,6 +150,18 @@ a {
 
 .center {
     text-align: center;
+}
+
+.center-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    &.full-page {
+        height: 100%;
+    }
 }
 
 

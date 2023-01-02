@@ -10,11 +10,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import Nav from './nav.js'
 import Home from '../pages/home.js';
-import Projects from '../pages/projects.js'
-import Backpacking from '../pages/backpacking.js'
+import ContentHome from '../pages/content-home.js'
+import Page404 from '../pages/404.js'
 import '../sass/app.scss';
 
-const MOBILE_WIDTH = 700;
+const MOBILE_WIDTH = 1000;
 
 class App extends React.Component {
 
@@ -64,14 +64,17 @@ class App extends React.Component {
                     <Nav show={this.state.showNav} mobile={this.state.mobile}/>
                     <div onClick={() => this.setState({showNav: !this.state.mobile || false})} id="site-content" className={this.state.mobile ? "mobile" : ""}>
                         <Switch>
-                            <Route path="/projects">
-                                <Projects mobile={this.state.mobile}/>
-                            </Route>
-                            <Route path="/backpacking">
-                                <Backpacking mobile={this.state.mobile}/>
-                            </Route>
+                            <Route path="/projects"
+                                component={() => <ContentHome dir="projects" mobile={this.state.mobile}/>}
+                            />
+                            <Route path="/trips"
+                                component={() => <ContentHome dir="trips" mobile={this.state.mobile}/>}
+                            />
                             <Route exact path="/">
-                                <Home/>
+                                <Home show={this.props.mobile}/>
+                            </Route>
+                            <Route>
+                                <Page404/>
                             </Route>
                         </Switch>
                     </div>
