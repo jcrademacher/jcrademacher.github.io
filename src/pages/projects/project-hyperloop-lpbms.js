@@ -29,4 +29,5 @@ export const metadata = {
     , date: moment("20190223")
     , route: "/hyperloop/bms"
     , thumbnail: mhype
+    , priority: 0
 }

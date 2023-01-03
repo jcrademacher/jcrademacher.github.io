@@ -21,7 +21,7 @@ function Home() {
             <h3>Hi, my name is Jack Rademacher and I'm a PhD student at MIT
             </h3>
             <p>
-                I built this site to showcase my <Link to="/projects">projects</Link> and <Link to="/trips">backpacking</Link> trips. 
+                I built this site to showcase my <Link to="/research">research</Link>, <Link to="/projects">projects</Link>, and <Link to="/trips">backpacking</Link> trips. 
                 I received my undergraduate degree in Electrical Engineering at the University of Michigan in 2021, and currently I am a graduate research assistant
                 in the <a href="https://signal-kinetics.media.mit.edu/">Signal Kinetics</a> group at the <a href="https://www.media.mit.edu/">MIT Media Lab</a>.
                 My research focuses on ultra low power, long range <a href="https://signal-kinetics.media.mit.edu/publications/ocean-iot/">underwater backscatter</a> for 
@@ -36,6 +36,7 @@ function Home() {
                         <li>Embedded systems</li>
                         <li>RF & microwave systems</li>
                         <li>Underwater acoustics</li>
+                        <li>Analog RFIC design</li>
                         <li>Piezoelectric transducer fabrication</li>
                         <li>Electro-mechanical co-design</li>
                         <li>Computer networks</li>
@@ -46,11 +47,12 @@ function Home() {
                         <li>C/C++</li>
                         <li>Python</li>
                         <li>MATLAB</li>
-                        <li>Javascript (NodeJS, React, ReactNative)</li>
                         <li>Altium Designer</li>
+                        <li>Cadence Allegro & Virtuoso</li>
                         <li>Keysight ADS</li>
                         <li>STM32</li>
                         <li>Solidworks</li>
+                        <li>Javascript (NodeJS, React, ReactNative)</li>
                     </ul>
                 </div>
             </div>

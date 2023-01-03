@@ -29,4 +29,5 @@ export const metadata = {
     , date: moment("20180415")
     , route: "/hyperloop/pdpcb"
     , thumbnail: mhype
+    , priority: 0
 }

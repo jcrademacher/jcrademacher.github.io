@@ -29,4 +29,5 @@ export const metadata = {
     , date: moment("20180423")
     , route: "/hyperloop/precharge"
     , thumbnail: mhype
+    , priority: 0
 }

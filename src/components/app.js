@@ -52,6 +52,12 @@ class App extends React.Component {
         window.removeEventListener('resize', this.updateDimensions);
     }
 
+    closeNav() {
+        if(this.state.showNav && this.state.mobile) {
+            this.setState({showNav: !this.state.mobile})
+        }
+    }
+    
     render() {
         return (
             <Router basename={`${process.env.PUBLIC_URL}/`} history={this.props.history}>
@@ -62,13 +68,16 @@ class App extends React.Component {
                         </a>
                     </div>
                     <Nav show={this.state.showNav} mobile={this.state.mobile}/>
-                    <div onClick={() => this.setState({showNav: !this.state.mobile})} id="site-content" className={this.state.mobile ? "mobile" : ""}>
+                    <div onClick={() => this.closeNav()} id="site-content" className={this.state.mobile ? "mobile" : ""}>
                         <Switch>
                             <Route path="/projects"
-                                component={() => <ContentHome dir="projects" mobile={this.state.mobile}/>}
+                                component={() => <ContentHome name="Projects" mobile={this.state.mobile}/>}
                             />
                             <Route path="/trips"
-                                component={() => <ContentHome dir="trips" mobile={this.state.mobile}/>}
+                                component={() => <ContentHome name="Trips" mobile={this.state.mobile}/>}
+                            />
+                            <Route path="/research"
+                                component={() => <ContentHome name="Research" mobile={this.state.mobile}/>}
                             />
                             <Route exact path="/">
                                 <Home show={this.props.mobile}/>
