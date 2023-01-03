@@ -3,7 +3,6 @@ import '../sass/home.scss'
 import profile from '../media/profile.jpg';
 import mich from '../media/Block_M-Hex.png';
 import mit from '../media/MIT_logo.png';
-import resume from '../media/resume.pdf'
 import {
     Link
 } from "react-router-dom";
@@ -62,7 +61,7 @@ function Home() {
                 <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html"> STM32 microcontrollers</a>. 
                 All software files are hosted on my <a href="https://github.com/jcrademacher">Github</a>, including <a href="https://github.com/jcrademacher/jcrademacher.github.io/tree/source">this site</a>. 
                 If you have any questions about my projects feel free to <a href="mailto:jackradema@gmail.com">email me</a>. 
-                For a full list of my qualifications and work experience you can check out my <a href={resume}>resume</a>.
+                For a full list of my qualifications and work experience you can check out my <Link to="/resume">resume</Link>.
             </p>
         </div>
     );

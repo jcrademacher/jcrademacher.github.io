@@ -13,6 +13,7 @@ import Home from '../pages/home.js';
 import ContentHome from '../pages/content-home.js'
 import Page404 from '../pages/404.js'
 import '../sass/app.scss';
+import resume from "../media/resume_work.pdf";
 
 const MOBILE_WIDTH = 1000;
 
@@ -79,9 +80,13 @@ class App extends React.Component {
                             <Route path="/research"
                                 component={() => <ContentHome name="Research" mobile={this.state.mobile}/>}
                             />
+                            <Route path="/resume"
+                                component={() => <iframe src={resume} width="100%" height="100%"/>}
+                            />
                             <Route exact path="/">
                                 <Home show={this.props.mobile}/>
                             </Route>
+                            
                             <Route>
                                 <Page404/>
                             </Route>

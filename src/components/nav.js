@@ -1,6 +1,5 @@
 import React from 'react';
 import '../sass/nav.scss';
-import resume from '../media/resume.pdf'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -88,9 +87,9 @@ function Nav(props) {
                 </NavHeader>
                 <div className="nav-header-container">
                     <span className="nav-header">
-                        <a href={resume}>
+                        <Link to="/resume">
                             Resume
-                        </a>
+                        </Link>
                     </span>
                 </div>
             </div>
