@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.f5a9501c.chunk.css",
-    "main.js": "/static/js/main.962348b4.chunk.js",
-    "main.js.map": "/static/js/main.962348b4.chunk.js.map",
+    "main.js": "/static/js/main.9c513ddd.chunk.js",
+    "main.js.map": "/static/js/main.9c513ddd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c7357b76.js",
     "runtime-main.js.map": "/static/js/runtime-main.c7357b76.js.map",
-    "static/js/2.ccaed1a5.chunk.js": "/static/js/2.ccaed1a5.chunk.js",
-    "static/js/2.ccaed1a5.chunk.js.map": "/static/js/2.ccaed1a5.chunk.js.map",
+    "static/js/2.e7da494f.chunk.js": "/static/js/2.e7da494f.chunk.js",
+    "static/js/2.e7da494f.chunk.js.map": "/static/js/2.e7da494f.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.f5a9501c.chunk.css.map": "/static/css/main.f5a9501c.chunk.css.map",
-    "static/js/2.ccaed1a5.chunk.js.LICENSE.txt": "/static/js/2.ccaed1a5.chunk.js.LICENSE.txt",
+    "static/js/2.e7da494f.chunk.js.LICENSE.txt": "/static/js/2.e7da494f.chunk.js.LICENSE.txt",
     "static/media/Block_M-Hex.a22e7e3e.png": "/static/media/Block_M-Hex.a22e7e3e.png",
     "static/media/MIT_logo.e3587119.png": "/static/media/MIT_logo.e3587119.png",
     "static/media/audio_music1_thumb.74a3fa2b.jpg": "/static/media/audio_music1_thumb.74a3fa2b.jpg",
@@ -17,6 +17,8 @@
     "static/media/audiov2_double_sided_demo.617731dd.mp4": "/static/media/audiov2_double_sided_demo.617731dd.mp4",
     "static/media/audiov2_single_sided_demo.367657f9.mp4": "/static/media/audiov2_single_sided_demo.367657f9.mp4",
     "static/media/bjt_amp_thumb.e0ca40b0.png": "/static/media/bjt_amp_thumb.e0ca40b0.png",
+    "static/media/camera_demo_thumb.4fd326d3.jpg": "/static/media/camera_demo_thumb.4fd326d3.jpg",
+    "static/media/cmcd_thumb.2a0da9b2.png": "/static/media/cmcd_thumb.2a0da9b2.png",
     "static/media/cone_peak_thumb.a53914a3.jpeg": "/static/media/cone_peak_thumb.a53914a3.jpeg",
     "static/media/death_valley_thumb.a03cc7e6.jpeg": "/static/media/death_valley_thumb.a03cc7e6.jpeg",
     "static/media/fet_diagram.2ace3f3b.png": "/static/media/fet_diagram.2ace3f3b.png",
@@ -32,8 +34,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c7357b76.js",
-    "static/js/2.ccaed1a5.chunk.js",
+    "static/js/2.e7da494f.chunk.js",
     "static/css/main.f5a9501c.chunk.css",
-    "static/js/main.962348b4.chunk.js"
+    "static/js/main.9c513ddd.chunk.js"
   ]
 }
