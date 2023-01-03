@@ -41,6 +41,9 @@ class ContentList extends React.Component {
         else if(this.props.name === "Trips") {
             modules.sort((a,b) => order*(a.metadata.date.isSameOrAfter(b.metadata.date) ? 1 : -1));
         }
+        else if(this.props.name === "Research") {
+            modules.sort((a,b) => order*(a.metadata.priority - b.metadata.priority));
+        }
 
         this.setState({ modules: modules });
     }
@@ -48,18 +51,22 @@ class ContentList extends React.Component {
     
 
     render() {
-
+        let routePrefix = `/${(this.props.name).toLowerCase()}`;
         return  (
             <div id="projects-container">
                 <Switch>
                     {this.state.modules.map((Module) => {
 
-                        return <Route exact key={Module.metadata.route} path={path.join(`/${this.props.name}`, Module.metadata.route)}>
+                        return <Route exact key={Module.metadata.route} path={path.join(routePrefix, Module.metadata.route)}>
                             <h1>{Module.metadata.title}</h1>
                             <img className="header" src={Module.metadata.thumbnail}/>
                             <h3>{Module.metadata.subtitle}</h3>
-                            <div className="metadata">{Module.metadata.tags.join(", ")}
-                            <br/>{Module.metadata.date && Module.metadata.date.format("MMMM Do, YYYY")}</div>
+                            {Module.metadata.doi ? <h3>DOI: <a href={Module.metadata.doi}>{Module.metadata.doi}</a></h3> : <div/>}
+                            <div className="metadata">
+                            {Module.metadata.event}
+                            <br/>{Module.metadata.date && Module.metadata.date.format("MMMM Do, YYYY")}
+                            <br/>{Module.metadata.tags.join(", ")}
+                            </div>
                             <br/>
                                 <Module.TableOfContents/>
                             <br/>
@@ -72,7 +79,7 @@ class ContentList extends React.Component {
                     }
                         
                     )}
-                    <Route exact path={`/${this.props.name}`}>
+                    <Route exact path={routePrefix}>
                         <h1>{this.props.name}</h1>
                         <div className="separator"/>
                         <br/>
@@ -81,7 +88,7 @@ class ContentList extends React.Component {
                                 <ContentListItem 
                                     key={Module.metadata.route} 
                                     mobile={this.props.mobile} 
-                                    to={path.join(this.props.name, Module.metadata.route)} 
+                                    to={path.join(routePrefix, Module.metadata.route)} 
                                     {...Module.metadata}
                                 />
                             )}

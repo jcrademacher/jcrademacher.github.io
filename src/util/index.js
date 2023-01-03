@@ -39,7 +39,7 @@ export function importModules(name) {
     else if(name === "Trips") {
         return importTripModules();
     }
-    else if(name == "Research") {
+    else if(name === "Research") {
         return importResearchModules();
     }
 }

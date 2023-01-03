@@ -97,7 +97,7 @@ function Nav(props) {
             <div id='contact-container' className={props.show ? "show" : ""}>
                 <a href="https://linkedin.com/in/jack-rademacher" className='icon-link social-media-link'><FontAwesomeIcon size="lg" icon={faLinkedinIn}/></a>
                 <a href="mailto:jackradema@gmail.com" className='icon-link social-media-link'><FontAwesomeIcon size="lg" icon={faEnvelope}/></a>
-                <a href="https://www.instagram.com/jrad66/?hl=en" className='icon-link social-media-link'><FontAwesomeIcon size="lg" icon={faInstagram}/></a>
+                <a href="https://www.instagram.com/jrad66/" className='icon-link social-media-link'><FontAwesomeIcon size="lg" icon={faInstagram}/></a>
                 <a href="https://github.com/jcrademacher" className='icon-link social-media-link'><FontAwesomeIcon size="lg" icon={faGithub}/></a>
             </div>
         </nav>
