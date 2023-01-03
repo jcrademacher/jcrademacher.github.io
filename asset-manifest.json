@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.be758227.chunk.css",
-    "main.js": "/static/js/main.278ae4b1.chunk.js",
-    "main.js.map": "/static/js/main.278ae4b1.chunk.js.map",
+    "main.css": "/static/css/main.f5a9501c.chunk.css",
+    "main.js": "/static/js/main.962348b4.chunk.js",
+    "main.js.map": "/static/js/main.962348b4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c7357b76.js",
     "runtime-main.js.map": "/static/js/runtime-main.c7357b76.js.map",
-    "static/js/2.2e93e33b.chunk.js": "/static/js/2.2e93e33b.chunk.js",
-    "static/js/2.2e93e33b.chunk.js.map": "/static/js/2.2e93e33b.chunk.js.map",
+    "static/js/2.ccaed1a5.chunk.js": "/static/js/2.ccaed1a5.chunk.js",
+    "static/js/2.ccaed1a5.chunk.js.map": "/static/js/2.ccaed1a5.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.be758227.chunk.css.map": "/static/css/main.be758227.chunk.css.map",
-    "static/js/2.2e93e33b.chunk.js.LICENSE.txt": "/static/js/2.2e93e33b.chunk.js.LICENSE.txt",
+    "static/css/main.f5a9501c.chunk.css.map": "/static/css/main.f5a9501c.chunk.css.map",
+    "static/js/2.ccaed1a5.chunk.js.LICENSE.txt": "/static/js/2.ccaed1a5.chunk.js.LICENSE.txt",
     "static/media/Block_M-Hex.a22e7e3e.png": "/static/media/Block_M-Hex.a22e7e3e.png",
-    "static/media/Jack Rademacher Resume.546aa04d.pdf": "/static/media/Jack Rademacher Resume.546aa04d.pdf",
     "static/media/MIT_logo.e3587119.png": "/static/media/MIT_logo.e3587119.png",
-    "static/media/audio_music1_thumb.jpg": "/static/media/audio_music1_thumb.74a3fa2b.jpg",
+    "static/media/audio_music1_thumb.74a3fa2b.jpg": "/static/media/audio_music1_thumb.74a3fa2b.jpg",
     "static/media/audio_music2_thumb.41c73e38.jpg": "/static/media/audio_music2_thumb.41c73e38.jpg",
     "static/media/audiov2_double_sided_demo.617731dd.mp4": "/static/media/audiov2_double_sided_demo.617731dd.mp4",
     "static/media/audiov2_single_sided_demo.367657f9.mp4": "/static/media/audiov2_single_sided_demo.367657f9.mp4",
@@ -23,6 +22,7 @@
     "static/media/fet_diagram.2ace3f3b.png": "/static/media/fet_diagram.2ace3f3b.png",
     "static/media/franconia_ridge_thumb.96a903e9.jpeg": "/static/media/franconia_ridge_thumb.96a903e9.jpeg",
     "static/media/humboldt_thumb.2212c94f.jpeg": "/static/media/humboldt_thumb.2212c94f.jpeg",
+    "static/media/kings_thumb.cb4b9ce1.jpeg": "/static/media/kings_thumb.cb4b9ce1.jpeg",
     "static/media/pod_thumb.41f927c9.png": "/static/media/pod_thumb.41f927c9.png",
     "static/media/profile.8255cacb.jpg": "/static/media/profile.8255cacb.jpg",
     "static/media/resume.e96053c9.pdf": "/static/media/resume.e96053c9.pdf",
@@ -32,8 +32,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c7357b76.js",
-    "static/js/2.2e93e33b.chunk.js",
-    "static/css/main.be758227.chunk.css",
-    "static/js/main.278ae4b1.chunk.js"
+    "static/js/2.ccaed1a5.chunk.js",
+    "static/css/main.f5a9501c.chunk.css",
+    "static/js/main.962348b4.chunk.js"
   ]
 }
