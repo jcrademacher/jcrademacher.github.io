@@ -28,4 +28,5 @@ export const metadata = {
     , date: moment("20170901")
     , thumbnail: pod
     , route: "/hyperloop"
+    , priority: 4
 }

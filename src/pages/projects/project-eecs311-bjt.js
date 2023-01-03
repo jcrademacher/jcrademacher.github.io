@@ -28,4 +28,5 @@ export const metadata = {
     , date: moment("20200428")
     , route: "/bjt-amplifier"
     , thumbnail: bjt
+    , priority: 8
 }

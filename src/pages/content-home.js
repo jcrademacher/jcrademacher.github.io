@@ -3,7 +3,7 @@ import {
     Route, Switch
 } from "react-router-dom"
 import '../sass/content.scss'
-import { importProjectModules, importTripModules } from '../util'
+import { importModules } from '../util'
 import { ContentListItem } from '../components/content-list'
 import Page404 from './404.js'
 
@@ -14,7 +14,7 @@ class ContentList extends React.Component {
         super(props);
 
         this.state = {
-            sortBy: "date",
+            sortBy: "priority",
             sortOrder: "descending",
             activeProject: null,
             modules: []
@@ -25,13 +25,21 @@ class ContentList extends React.Component {
         //console.log("mounted");
         let { sortBy, sortOrder } = this.state;
         let order = sortOrder == "ascending" ? 1 : -1;
-        let modules = this.props.dir === "projects" ? importProjectModules() : importTripModules();
+        let modules = importModules(this.props.name);
 
-        if(sortBy == "date") {
-            modules.sort((a,b) => order*(a.metadata.date.isSameOrAfter(b.metadata.date) ? 1 : -1));
+        if(this.props.name === "Projects") {
+            if(sortBy == "date") {
+                modules.sort((a,b) => order*(a.metadata.date.isSameOrAfter(b.metadata.date) ? 1 : -1));
+            }
+            else if(sortBy == "priority") {
+                modules.sort((a,b) => order*(a.metadata.priority - b.metadata.priority));
+            }
+            else {
+                modules.sort((a,b) => order*a.metadata.title.localeCompare(b.metadata.title));
+            }
         }
-        else {
-            modules.sort((a,b) => order*a.metadata.title.localeCompare(b.metadata.title));
+        else if(this.props.name === "Trips") {
+            modules.sort((a,b) => order*(a.metadata.date.isSameOrAfter(b.metadata.date) ? 1 : -1));
         }
 
         this.setState({ modules: modules });
@@ -46,7 +54,7 @@ class ContentList extends React.Component {
                 <Switch>
                     {this.state.modules.map((Module) => {
 
-                        return <Route exact key={Module.metadata.route} path={path.join(`/${this.props.dir}`, Module.metadata.route)}>
+                        return <Route exact key={Module.metadata.route} path={path.join(`/${this.props.name}`, Module.metadata.route)}>
                             <h1>{Module.metadata.title}</h1>
                             <img className="header" src={Module.metadata.thumbnail}/>
                             <h3>{Module.metadata.subtitle}</h3>
@@ -64,8 +72,8 @@ class ContentList extends React.Component {
                     }
                         
                     )}
-                    <Route exact path={`/${this.props.dir}`}>
-                        <h1>{this.props.dir === 'projects' ? "Projects" : "Trips"}</h1>
+                    <Route exact path={`/${this.props.name}`}>
+                        <h1>{this.props.name}</h1>
                         <div className="separator"/>
                         <br/>
                         <div id="projects-list-container">
@@ -73,7 +81,7 @@ class ContentList extends React.Component {
                                 <ContentListItem 
                                     key={Module.metadata.route} 
                                     mobile={this.props.mobile} 
-                                    to={path.join(this.props.dir, Module.metadata.route)} 
+                                    to={path.join(this.props.name, Module.metadata.route)} 
                                     {...Module.metadata}
                                 />
                             )}

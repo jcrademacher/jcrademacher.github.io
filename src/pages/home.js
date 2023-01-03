@@ -12,23 +12,23 @@ function Home() {
     return (
         <div id="home">
             <div id="profiles">
-                <img class="profile-cl" src={mich}></img>
+                <img className="profile-cl" src={mich}></img>
                 <img id="profile" src={profile}></img>
-                <img class="profile-cl" src={mit}></img>
+                <img className="profile-cl" src={mit}></img>
             </div>
             
             <br/><br/>
             <h3>Hi, my name is Jack Rademacher and I'm a PhD student at MIT
             </h3>
             <p>
-                I built this site to showcase my <Link to="/projects">projects</Link> and <Link to="/backpacking">backpacking</Link> trips. 
+                I built this site to showcase my <Link to="/research">research</Link>, <Link to="/projects">projects</Link>, and <Link to="/trips">backpacking</Link> trips. 
                 I received my undergraduate degree in Electrical Engineering at the University of Michigan in 2021, and currently I am a graduate research assistant
                 in the <a href="https://signal-kinetics.media.mit.edu/">Signal Kinetics</a> group at the <a href="https://www.media.mit.edu/">MIT Media Lab</a>.
                 My research focuses on ultra low power, long range <a href="https://signal-kinetics.media.mit.edu/publications/ocean-iot/">underwater backscatter</a> for 
                 large-scale ocean and climate monitoring, aquaculture, and naval defense. 
             </p>
             <div id="home-flex">
-                <div class="home-flex-item">
+                <div className="home-flex-item">
                     <h3>Experience</h3>
                     <ul>
                         <li>Circuit design</li>
@@ -36,21 +36,23 @@ function Home() {
                         <li>Embedded systems</li>
                         <li>RF & microwave systems</li>
                         <li>Underwater acoustics</li>
+                        <li>Analog RFIC design</li>
                         <li>Piezoelectric transducer fabrication</li>
                         <li>Electro-mechanical co-design</li>
                         <li>Computer networks</li>
                     </ul>
                 </div>
-                <div class="home-flex-item"><h3>Software/Hardware Platforms</h3>
+                <div className="home-flex-item"><h3>Software/Hardware Platforms</h3>
                     <ul>
                         <li>C/C++</li>
                         <li>Python</li>
                         <li>MATLAB</li>
-                        <li>Javascript (NodeJS, React, ReactNative)</li>
                         <li>Altium Designer</li>
+                        <li>Cadence Allegro & Virtuoso</li>
                         <li>Keysight ADS</li>
                         <li>STM32</li>
                         <li>Solidworks</li>
+                        <li>Javascript (NodeJS, React, ReactNative)</li>
                     </ul>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { TableOfContentsWrapper, TableOfContentsHeading, TableOfContentsSubheading } from '../../components/content-list'
 import audio1 from '../../media/audio_music1/audio_music1_thumb.jpg'
 
@@ -7,7 +8,11 @@ var moment = require('moment');
 function AudioLEDsVersion1Project() {
     return (
         <div>
-            This page is still under construction, please check back soon!
+            <p>
+                This project was version 1 of a larger goal to make LEDs react to the beat of music that I like. In this project, I used an Arduino nano 
+                to sample the input from an audio jack and display the level of the audio as the number of LEDs lit up on a strip. This was a pretty basic proof-of-concept 
+                that led to a much-needed improvement in the <Link to="/projects/music-led-2">version 2</Link> that I made.
+            </p>
         </div>
     );
 }
@@ -15,11 +20,12 @@ function AudioLEDsVersion1Project() {
 export default AudioLEDsVersion1Project;
 
 export function TableOfContents() {
-    return (
-        <TableOfContentsWrapper>
+    return <div></div>;
+    // return (
+    //     <TableOfContentsWrapper>
 
-        </TableOfContentsWrapper>
-    );
+    //     </TableOfContentsWrapper>
+    // );
 }
 
 export const metadata = { 
@@ -31,4 +37,5 @@ export const metadata = {
     , date: moment("20181005")
     , thumbnail: audio1
     , route: "/music-led-1"
+    , priority: 5
 }

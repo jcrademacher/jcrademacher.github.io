@@ -1,6 +1,6 @@
 import React from 'react'
 import { TableOfContentsWrapper, TableOfContentsHeading, TableOfContentsSubheading } from '../../components/content-list'
-//import audio1 from '../../media/audio_music1/audio_music1_thumb.jpg'
+import mhype from '../../media/hyperloop/mhype_thumb.jpeg'
 
 var moment = require('moment'); 
 
@@ -28,4 +28,6 @@ export const metadata = {
     , tags: ["High Voltage", "PCB", "Michigan Hyperloop"]
     , date: moment("20180423")
     , route: "/hyperloop/precharge"
+    , thumbnail: mhype
+    , priority: 0
 }

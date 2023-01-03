@@ -71,4 +71,5 @@ export const metadata = {
     , date: moment("20171212")
     , thumbnail: scoreboard
     , route: "/scoreboard"
+    , priority: 9
 };
