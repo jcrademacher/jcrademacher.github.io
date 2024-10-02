@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4433ecec.css",
-    "main.js": "/static/js/main.603f79e7.js",
+    "main.js": "/static/js/main.9cf9dfc5.js",
     "static/media/audiov2_single_sided_demo.mp4": "/static/media/audiov2_single_sided_demo.367657f9d7582438b6dd.mp4",
     "static/media/audiov2_double_sided_demo.mp4": "/static/media/audiov2_double_sided_demo.617731ddd64c5073b866.mp4",
     "static/media/cone_peak_thumb.jpeg": "/static/media/cone_peak_thumb.a53914a3083fc0ab6525.jpeg",
@@ -27,10 +27,10 @@
     "static/media/Block_M-Hex.png": "/static/media/Block_M-Hex.a22e7e3e79e7499d8fe4.png",
     "index.html": "/index.html",
     "main.4433ecec.css.map": "/static/css/main.4433ecec.css.map",
-    "main.603f79e7.js.map": "/static/js/main.603f79e7.js.map"
+    "main.9cf9dfc5.js.map": "/static/js/main.9cf9dfc5.js.map"
   },
   "entrypoints": [
     "static/css/main.4433ecec.css",
-    "static/js/main.603f79e7.js"
+    "static/js/main.9cf9dfc5.js"
   ]
 }
