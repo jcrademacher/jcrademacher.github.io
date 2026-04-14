@@ -4,3 +4,4 @@ person-site.code-workspace
 .DS_Store
 src/media/*/*\ -\ *.jpeg
 src/media/*/*.mov
+dist

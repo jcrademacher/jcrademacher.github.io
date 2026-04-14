@@ -1,45 +1,27 @@
-const requireProjects = require.context('../pages/projects', false, /project-.+\.js/);
-const requireTrips = require.context('../pages/trips', false, /trip-.+\.js/);
-const requireResearch = require.context('../pages/research', false, /research-.+\.js/);
+const projectModules = import.meta.glob('../pages/projects/project-*.jsx', { eager: true });
+const tripModules = import.meta.glob('../pages/trips/trip-*.jsx', { eager: true });
+const researchModules = import.meta.glob('../pages/research/research-*.jsx', { eager: true });
+
+function filterValidModules(modules) {
+    return Object.values(modules).filter(
+        (mod) => mod?.default && mod?.metadata && mod?.TableOfContents
+    );
+}
 
 export function importProjectModules() {
-    return requireProjects.keys().filter((item) => {
-        let module = requireProjects(item);
-
-        if(module && module.default && module.metadata && module.TableOfContents)
-            return module;
-    })
-    .map(requireProjects);
+    return filterValidModules(projectModules);
 }
 
 export function importTripModules() {
-    return requireTrips.keys().filter((item) => {
-        let module = requireTrips(item);
-
-        if(module && module.default && module.metadata && module.TableOfContents)
-            return module;
-    })
-    .map(requireTrips);
+    return filterValidModules(tripModules);
 }
 
 export function importResearchModules() {
-    return requireResearch.keys().filter((item) => {
-        let module = requireResearch(item);
-
-        if(module && module.default && module.metadata && module.TableOfContents)
-            return module;
-    })
-    .map(requireResearch);
+    return filterValidModules(researchModules);
 }
 
 export function importModules(name) {
-    if(name === "Projects") {
-        return importProjectModules();
-    }
-    else if(name === "Trips") {
-        return importTripModules();
-    }
-    else if(name === "Research") {
-        return importResearchModules();
-    }
+    if (name === "Projects") return importProjectModules();
+    if (name === "Trips") return importTripModules();
+    if (name === "Research") return importResearchModules();
 }

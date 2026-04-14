@@ -1,4 +1,4 @@
-@import 'theme';
+@use 'theme' as *;
 
 #site-nav {
     height: 100%;
@@ -64,15 +64,14 @@
 
 .nav-header-container {
     margin-bottom: 10px;
-    overflow: hidden;
 
     .nav-content {
         max-height: 0px;
         transition: max-height ease 0.4s;
-        overflow-y: hidden;
+        overflow: hidden;
 
         &.opened {
-            max-height: 700px;
+            max-height: 2000px;
         }
 
         .nav-item {

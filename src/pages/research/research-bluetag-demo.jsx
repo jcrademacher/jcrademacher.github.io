@@ -1,0 +1,35 @@
+import headerImage from '../../media/bluetag-demo/bluetag_v3.png';
+import thumbnail from '../../media/bluetag-demo/bluetag_v3.png?thumbnail';
+import moment from 'moment';
+
+function BlueTagDemo() {
+    return (
+        <div>
+        </div>
+    );
+}
+
+export default BlueTagDemo;
+
+export function TableOfContents() {
+    return <div></div>;
+}
+
+export const metadata = { 
+    title: "Demo: Leveraging Underwater Backscatter for Long-Term Environmental Sensing"
+    , subtitle: `This demo presents BlueTag, a permanently deployed underwater sensor system 
+    based on backscatter communication. BlueTag is a battery-powered CTD (conductivity, temperature, depth) 
+    sensor that transmits measurements every 15 minutes to a remote base station via underwater backscatter. 
+    The base station archives these measurements and publishes them online. Unlike prior underwater backscatter 
+    systems limited to short-term laboratory experiments, BlueTag has been deployed in the Charles River 
+    in Boston, MA since July 9th, 2025, marking the first long-term underwater backscatter deployment 
+    of its kind to sense meaningful environmental data. Live data from this deployment is available 
+    publicly at https://sk-exp-server.mit.edu/.`
+    , tags: ["Research", "Underwater Backscatter", "Environmental Sensing", "Long-Term Deployment"]
+    , date: moment("20251121")
+    , thumbnail
+    , doi: "https://doi.org/10.1145/3680207.3765591"
+    , headerImage
+    , route: "/bluetag-demo"
+    , priority: 15
+}
